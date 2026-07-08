@@ -1,0 +1,134 @@
+/* =========================
+   Desktop First
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+main {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 140px 40px 60px;
+    position: relative;
+}
+
+.first_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.firstp {
+    color: #6B59D0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h1 {
+    max-width: 520px;
+    font-size: 56px;
+    line-height: 1.1;
+    color: #2F3347;
+    margin-bottom: 80px;
+}
+
+.main_process {
+    display: flex;
+    gap: 20px;
+}
+
+.sub_process {
+    flex: 1;
+    border-left: 1px dashed #D2D5DA;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sub_process::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 88px;
+    width: 2px;
+    height: 24px;
+    background: #6B59D0;
+}
+
+.sub_process img {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 36px;
+}
+
+.sub_process p:first-of-type {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2F3347;
+}
+
+.sub_process p:last-of-type {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4D5562;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+
+    main {
+        padding: 120px 30px 50px;
+    }
+
+    h1 {
+        font-size: 44px;
+        margin-bottom: 60px;
+    }
+
+    .main_process {
+        flex-wrap: wrap;
+    }
+
+    .sub_process {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 640px) {
+
+    main {
+        padding: 100px 20px 40px;
+    }
+
+    h1 {
+        font-size: 34px;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .main_process {
+        flex-direction: column;
+    }
+
+    .sub_process {
+        width: 100%;
+    }
+}
